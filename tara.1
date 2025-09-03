@@ -1,0 +1,60 @@
+.TH TARA 1 "September 2025" "GNU GPL v3" "Tara Manual"
+.SH NAME
+Tara \- Easy tar command aliases
+.SH SYNOPSIS
+.B tara
+[option] [compression] [name] [files]
+.SH DESCRIPTION
+Tara is a collection of bash scripts that serve as convenient aliases for common tar commands, simplifying archive management.
+.SH OPTIONS
+.TP
+.B -b, -ball
+Create a tarball.
+.TP
+.B -c, -compress
+Compress files.
+.TP
+.B -d, -decompress
+Decompress files.
+.TP
+.B -h, -help
+Show help message.
+.SH COMPRESSION METHODS
+.TP
+.B --bz, --bzip2
+Use bzip2 compression.
+.TP
+.B --gz, --gzip
+Use gzip compression.
+.TP
+.B --lzip
+Use lzip compression.
+.TP
+.B --lzma
+Use lzma compression.
+.TP
+.B --lzop
+Use lzop compression.
+.TP
+.B --xz, --xzip
+Use xz compression.
+.TP
+.B --zs, --zstd
+Use zstd compression.
+.TP
+.B --Z
+Use compress (legacy UNIX).
+.SH USAGE
+Examples:
+.IP
+.B tara -b --gz myarchive.tar file1 file2
+Creates a gzip-compressed tarball named myarchive.tar containing file1 and file2.
+.IP
+.B tara -d --bz myarchive.tar
+Decompresses a bzip2-compressed tarball named myarchive.tar.
+.SH WARNING
+The compression algorithm must be supported by your tar installation. If not, the command will fail.
+.SH LICENSE
+GNU GPL v3
+.SH AUTHOR
+Written by Robert.
