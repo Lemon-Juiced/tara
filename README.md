@@ -60,3 +60,10 @@ Tara is inspired by an older project called `DTar`, originally written in the D 
 Tara takes a different approach by focusing on simplicity, but it intentionally breaks with the traditional Unix philosophy. While the Unix philosophy encourages programs to do one thing well, Tara combines several related tasks—creating, compressing, and decompressing archives—into a single, lightweight bash script. Unlike DTar, which was a suite of separate programs, Tara is easier to maintain and use, but does not strictly adhere to the "do one thing well" principle. Instead, it aims to provide essential archive management features in one convenient tool for Unix-like systems (or any environment that supports bash).
 
 Note: Tara does not support Windows natively. While DTar could run on Windows due to its compiled nature, Tara relies on bash and standard Unix utilities, making it best suited for Linux, macOS, and similar platforms. If your platform supports bash scripting and tar, this program should theoretically work for you as well.
+
+## To Do
+1. Fix oversight where file extensions aren't applied to tar file.
+2. Add flag like `-nx` to not add an extension.
+3. Add option to view, `-v`, inside a tarball.
+4. Add option to add, `-a`, to a tarball.
+5. Add option to remove, `-r`, from a tarball.
