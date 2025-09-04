@@ -46,12 +46,21 @@ Use zstd compression.
 Use compress (legacy UNIX).
 .SH USAGE
 Examples:
-.IP
-.B tara -b --gz myarchive.tar file1 file2
-Creates a gzip-compressed tarball named myarchive.tar containing file1 and file2.
-.IP
-.B tara -d --bz myarchive.tar
-Decompresses a bzip2-compressed tarball named myarchive.tar.
+.TP
+.B tara -b --gz myarchive file1 file2
+Creates a gzip-compressed tarball named myarchive.tar.gz containing file1 and file2.
+.TP
+.B tara -b -nx myarchive file1 file2
+Creates a tarball named myarchive (no extension added).
+.TP
+.B tara -v myarchive.tar.gz
+Views the contents of myarchive.tar.gz.
+.TP
+.B tara -a myarchive.tar.gz newfile1 newfile2
+Adds newfile1 and newfile2 to myarchive.tar.gz.
+.TP
+.B tara -r myarchive.tar.gz oldfile.txt
+Removes oldfile.txt from myarchive.tar.gz.
 .SH WARNING
 The compression algorithm must be supported by your tar installation. If not, the command will fail.
 .SH LICENSE
